@@ -3,7 +3,7 @@ package data.models;
 import java.util.ArrayList;
 import java.util.List;
 
-class UserRepositoryImpl implements UserRepository{
+public class UserRepositoryImpl implements UserRespository {
   private final List <User> data= new ArrayList<>();
   private String email;
     @Override
@@ -13,16 +13,16 @@ class UserRepositoryImpl implements UserRepository{
 
     }
 
-    private String generateEmail() {
-        email =(email+1) ;
-        return email;
+//    private String generateEmail() {
+//        email =(email+1) ;
+//        return email;
 
-    }
+
 
     @Override
     public User findByEmail(String email) {
         for (User aUser : data) {
-          if  (aUser.getEmail().equals(email))
+          if(aUser.getEmail().equals(email))
             return aUser;
         }
 return null;

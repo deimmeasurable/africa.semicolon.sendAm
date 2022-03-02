@@ -2,7 +2,7 @@ package data.models;
 
 import java.util.List;
 
-interface UserRepository {
+public interface UserRespository {
     User save(User aUser);
     User findByEmail(String email);
     void delete(User aUser);

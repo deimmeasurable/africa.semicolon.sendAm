@@ -8,7 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserRepositoryImplTest {
-    private UserRepository customer;
+    private UserRespository customer;
     @BeforeEach
     public void setUp(){
         customer=new UserRepositoryImpl();
@@ -17,7 +17,7 @@ class UserRepositoryImplTest {
         @Test
         public void UserSavesTest(){
         //given
-        User aUser=new User("deolaoladeji@gmail.com");
+        User aUser=new User("deolaoladeji@gmail.com","","","");
 
         //when i try to save the save;
 //            aUser.setEmail("deolaoladeji@gmail.com");
@@ -31,9 +31,9 @@ class UserRepositoryImplTest {
     @Test
     void UserSaveTest(){
         //given
-        User firstUser = new User("deolaoladeji@gmail.com");
-        User secondUser = new User("ted@gmail.com");
-        User ThirdUser = new User("rate34@gmail.com");
+        User firstUser = new User("deolaoladeji@gmail.com","","","");
+        User secondUser = new User("ted@gmail.com","","","");
+        User ThirdUser = new User("rate34@gmail.com","","","");
         //when
         customer.save(firstUser);
         customer.save(secondUser);
@@ -49,9 +49,9 @@ class UserRepositoryImplTest {
     @Test
     void deleteUserByEmailTest(){
         //given
-        User firstUser = new User("deolaoladeji@gmail.com");
-        User secondUser = new User("ted@gmail.com");
-        User ThirdUser = new User("rate34@gmail.com");
+        User firstUser = new User("deolaoladeji@gmail.com","","","");
+        User secondUser = new User("ted@gmail.com","","","");
+        User ThirdUser = new User("rate34@gmail.com","","","");
         //when
         customer.save(firstUser);
         customer.save(secondUser);
@@ -63,9 +63,9 @@ class UserRepositoryImplTest {
 
     private void saveThreeUsers(){
         //given
-        User firstUser = new User("deolaoladeji@gmail.com");
-        User secondUser = new User("ted@gmail.com");
-        User ThirdUser = new User("rate34@gmail.com");
+        User firstUser = new User("deolaoladeji@gmail.com","","","");
+        User secondUser = new User("ted@gmail.com","","","");
+        User ThirdUser = new User("rate34@gmail.com","","","");
         //when
         customer.save(firstUser);
         customer.save(secondUser);
@@ -85,15 +85,15 @@ class UserRepositoryImplTest {
         //given
         saveThreeUsers();
         customer.delete("del@gmail.com");
-        User savedUser=customer.save(new User("del@gmail.com"));
+        User savedUser=customer.save(new User("del@gmail.com","","",""));
         assertEquals("del@gmail.com",savedUser.getEmail());
     }
     @Test
     void deleteByUserTest(){
         //given
-        User firstUser = new User("deolaoladeji@gmail.com");
-        User secondUser = new User("ted@gmail.com");
-        User ThirdUser = new User("rate34@gmail.com");
+        User firstUser = new User("deolaoladeji@gmail.com","","","");
+        User secondUser = new User("ted@gmail.com","","","");
+        User ThirdUser = new User("rate34@gmail.com","","","");
 
         customer.save(firstUser);
         customer.save(secondUser);

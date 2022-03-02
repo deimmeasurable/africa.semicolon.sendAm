@@ -1,13 +1,28 @@
 package data.models;
 
 public class User {
+
+    private String User;
     private String email;
     private String phoneNumber;
-    private String fullName;
+    private static String fullName;
     private String address;
 
-    public User(String email) {
+    public User(String email, String phoneNumber, String fullName, String address) {
         this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.fullName = fullName;
+        this.address = address;
+
+
+    }
+
+    public String getUser() {
+        return User;
+    }
+
+    public void setUser(String user) {
+        User = user;
     }
 
     public String getEmail() {
@@ -26,12 +41,12 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getFullName() {
+    public static String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public static void setFullName(String fullName) {
+        fullName = fullName;
     }
 
     public String getAddress() {
@@ -41,8 +56,6 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
-
-
 
     @Override
     public String toString() {
