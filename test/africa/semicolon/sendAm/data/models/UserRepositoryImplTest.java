@@ -1,5 +1,7 @@
 package africa.semicolon.sendAm.data.models;
 
+import africa.semicolon.sendAm.data.respositories.UserRepository;
+import africa.semicolon.sendAm.data.respositories.UserRepositoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserRepositoryImplTest {
-    private UserRespository customer;
+    private UserRepository customer;
     @BeforeEach
     public void setUp(){
         customer=new UserRepositoryImpl();

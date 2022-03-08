@@ -1,4 +1,6 @@
-package africa.semicolon.sendAm.data.models;
+package africa.semicolon.sendAm.data.respositories;
+
+import africa.semicolon.sendAm.data.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
