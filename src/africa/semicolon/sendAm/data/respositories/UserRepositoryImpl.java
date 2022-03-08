@@ -3,19 +3,20 @@ package africa.semicolon.sendAm.data.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserRepositoryImpl implements UserRespository {
-  private final List <User> data= new ArrayList<>();
-  private String email;
+public class UserRepositoryImpl implements UserRepository {
+    private final List<User> data = new ArrayList<>();
+    private String email;
+
     @Override
     public User save(User aUser) {
-       data.add(aUser);
+        data.add(aUser);
         return aUser;
 
     }
 
-//    private String generateEmail() {
-//        email =(email+1) ;
-//        return email;
+
+
+
 
 
 
