@@ -8,7 +8,11 @@ public class Package {
     private PackageDescription description;
     private final List<Status> statusList = new ArrayList<>();
 
-    public Package(int id, int quantityOfPackage, String emailAddress, String s) {
+//    public Package(int id, int quantityOfPackage, String emailAddress, String s) {
+//    }
+
+    public Package() {
+
     }
 
     public int getId() {
